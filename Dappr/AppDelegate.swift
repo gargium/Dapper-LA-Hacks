@@ -12,11 +12,32 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    
+    func UIColorFromRGB(colorCode: String, alpha: Float = 1.0) -> UIColor {
+        var scanner = NSScanner(string:colorCode)
+        var color:UInt32 = 0;
+        scanner.scanHexInt(&color)
+        
+        let mask = 0x000000FF
+        let r = CGFloat(Float(Int(color >> 16) & mask)/255.0)
+        let g = CGFloat(Float(Int(color >> 8) & mask)/255.0)
+        let b = CGFloat(Float(Int(color) & mask)/255.0)
+        
+        return UIColor(red: r, green: g, blue: b, alpha: CGFloat(alpha))
+    }
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         Parse.setApplicationId("UuUg9EhPmsxKkYhkseZ07SqlGe00kL30cjGZBE7A", clientKey: "QguQI6J8shFyUI5WKnBBenrGLTJNYKoteg67CdNY")
+        
+        var navigationBarAppearace = UINavigationBar.appearance()
+        
+     //   navigationBarAppearace.tintColor = UIColorFromRGB("000000", alpha: 1);
+        navigationBarAppearace.barTintColor = UIColorFromRGB("471606", alpha: 1);
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()];
+        
+        
+
         return true
     }
 

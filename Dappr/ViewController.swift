@@ -27,6 +27,7 @@ class ViewController: UIViewController {
         lgPassField.hidden = false
         lgUserField.hidden = false
         lgGo.hidden = false
+        let json = JSON(["name", "age"])
     }
     
     @IBAction func lgGoPressed(sender: AnyObject) {
@@ -102,7 +103,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "init.png")!)
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "init2.png")!)
         lgUserField.hidden = true
         lgPassField.hidden = true
         lgGo.hidden = true
