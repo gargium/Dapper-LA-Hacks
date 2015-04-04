@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D113c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -146,10 +146,10 @@
             </objects>
             <point key="canvasLocation" x="158" y="-429"/>
         </scene>
-        <!--Shopping Cart-->
+        <!--Create Outfit-->
         <scene sceneID="9Um-iv-3Bp">
             <objects>
-                <viewController title="Shopping Cart" id="d3B-Sl-DgV" sceneMemberID="viewController">
+                <viewController title="Create Outfit" id="d3B-Sl-DgV" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KW4-0K-b1R"/>
                         <viewControllerLayoutGuide type="bottom" id="sNB-Qx-IVg"/>
@@ -159,7 +159,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Shopping Cart" id="hAe-kR-wf8"/>
+                    <navigationItem key="navigationItem" title="Create Outfit" id="hAe-kR-wf8"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iwa-fu-Jwh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -241,7 +241,7 @@
         <!--Catalog-->
         <scene sceneID="FQU-Ua-h5v">
             <objects>
-                <viewController id="MPE-BM-ed5" sceneMemberID="viewController">
+                <viewController id="MPE-BM-ed5" customClass="CatalogViewController" customModule="Dapper" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9sm-pg-fwO"/>
                         <viewControllerLayoutGuide type="bottom" id="9Oq-3Q-g8J"/>
@@ -250,24 +250,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKK-Ui-ky8">
-                                <rect key="frame" x="197" y="161" width="115" height="30"/>
-                                <state key="normal" title="Mens">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="AlM-2Q-x5k" kind="show" id="dgo-PD-MM2"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FBA-qh-rsA">
-                                <rect key="frame" x="203" y="345" width="102" height="30"/>
-                                <state key="normal" title="Womens">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="duQ-uj-Flf" kind="show" id="Q53-Kb-We2"/>
-                                </connections>
-                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="54W-mp-Nnm">
+                                <rect key="frame" x="0.0" y="38" width="600" height="600"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nPA-jo-cjY">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="G6M-0q-hD8">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -295,93 +297,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wIo-tY-R4t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2492" y="-817"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="scc-BF-suK">
-            <objects>
-                <viewController id="AlM-2Q-x5k" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="d3A-bL-DQe"/>
-                        <viewControllerLayoutGuide type="bottom" id="bSB-c4-zD7"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kgT-HM-gUH">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnH-lC-2Ao">
-                                <rect key="frame" x="277" y="205" width="46" height="30"/>
-                                <state key="normal" title="Pants">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B7n-t6-4Fq">
-                                <rect key="frame" x="277" y="307" width="46" height="30"/>
-                                <state key="normal" title="Shorts">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d6G-wq-K3i">
-                                <rect key="frame" x="277" y="131" width="46" height="30"/>
-                                <state key="normal" title="Shirts">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rAT-rW-qiF">
-                                <rect key="frame" x="277" y="394" width="46" height="30"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                <state key="normal" title="Shoes"/>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KGz-jy-Nac" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3199" y="-473"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="SdR-jb-uEo">
-            <objects>
-                <viewController id="duQ-uj-Flf" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="bfB-Lw-Ln5"/>
-                        <viewControllerLayoutGuide type="bottom" id="rzZ-Da-fYN"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="EPL-ta-dGg">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mFx-nK-cP7">
-                                <rect key="frame" x="262" y="236" width="46" height="30"/>
-                                <state key="normal" title="Skirts">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQ0-fS-xaC">
-                                <rect key="frame" x="262" y="325" width="46" height="30"/>
-                                <state key="normal" title="Jeans">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ROy-zd-ASE">
-                                <rect key="frame" x="262" y="404" width="46" height="30"/>
-                                <state key="normal" title="Shoes">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZe-Gg-JyI">
-                                <rect key="frame" x="262" y="136" width="46" height="30"/>
-                                <state key="normal" title="Tops">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZBN-ka-yIS" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3199" y="177"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="XO2-6y-9b5">
@@ -481,10 +396,10 @@
             </objects>
             <point key="canvasLocation" x="1841" y="-817"/>
         </scene>
-        <!--Shopping Cart-->
+        <!--Create Outfit-->
         <scene sceneID="Tzt-Ji-mfD">
             <objects>
-                <navigationController title="Shopping Cart" automaticallyAdjustsScrollViewInsets="NO" id="Wsv-5k-Rs4" sceneMemberID="viewController">
+                <navigationController title="Create Outfit" automaticallyAdjustsScrollViewInsets="NO" id="Wsv-5k-Rs4" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" systemItem="downloads" id="qLv-fr-F2B"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="CF4-Tc-e1Z">
