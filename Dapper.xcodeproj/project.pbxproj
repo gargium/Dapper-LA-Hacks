@@ -442,7 +442,7 @@
 				PRODUCT_NAME = Dapper;
 				SWIFT_OBJC_BRIDGING_HEADER = "Dappr/Dapper-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -460,7 +460,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = Dapper;
 				SWIFT_OBJC_BRIDGING_HEADER = "Dappr/Dapper-Bridging-Header.h";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -517,6 +517,7 @@
 				9E3EC1E91ACF766B008F3C08 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9E3EC1EA1ACF766B008F3C08 /* Build configuration list for PBXNativeTarget "DapperTests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +526,7 @@
 				9E3EC1EC1ACF766B008F3C08 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
