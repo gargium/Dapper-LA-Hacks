@@ -19,7 +19,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var accButton: UIButton!
     @IBOutlet weak var accEmailField: UITextField!
     @IBOutlet weak var accPassField: UITextField!
-    @IBOutlet weak var accUserField: UITextField!
     @IBOutlet weak var accConfirmPassField: UITextField!
     @IBOutlet weak var accGo: UIButton!
     
@@ -30,10 +29,30 @@ class ViewController: UIViewController {
         lgGo.hidden = false
     }
     
+    @IBAction func lgGoPressed(sender: AnyObject) {
+        if (lgUserField.text.isEmpty || lgPassField.text.isEmpty) {
+            var alert = UIAlertController(title: "Error", message: "All fields must be filled", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+            //check to make sure pass fields match
+        else {
+            PFUser.logInWithUsernameInBackground(lgUserField.text, password:lgPassField.text) {
+                (user: PFUser!, error: NSError!) -> Void in
+                if user != nil {
+                    //user exists
+                } else {
+                    var alert = UIAlertController(title: "Error", message: "A user matching this username and password was not found in our system", preferredStyle: UIAlertControllerStyle.Alert)
+                    alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default, handler: nil))
+                    self.presentViewController(alert, animated: true, completion: nil)
+                }
+            }
+        }
+
+    }
     //account actions
     @IBAction func accPressed(sender: AnyObject) {
         accEmailField.hidden = false
-        accUserField.hidden = false
         accConfirmPassField.hidden = false
         accPassField.hidden = false
         accGo.hidden = false
@@ -42,14 +61,45 @@ class ViewController: UIViewController {
     
     @IBAction func accGoPressed(sender: AnyObject) {
         lgGo.hidden = true
-        if (accConfirmPassField.text != accPassField.text) {
-            var alert = UIAlertController(title: "Error", message: "Passwords do not match!", preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "Redo", style: UIAlertActionStyle.Default, handler: nil))
+        if (accEmailField.text.isEmpty || accPassField.text.isEmpty || accConfirmPassField.text.isEmpty) {
+            var alert = UIAlertController(title: "Error", message: "All fields must be filled", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
         }
+        //check to make sure pass fields match
+        else if (accConfirmPassField.text != accPassField.text) {
+            var alert = UIAlertController(title: "Error", message: "Passwords do not match!", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+        else {
+            createAcc()
+        }
+        
+        //no bools triggered
     }
     
     
+    func createAcc() {
+        var newUser = PFUser()
+        newUser.email = accEmailField.text
+        newUser.password = accConfirmPassField.text
+        newUser.username = accEmailField.text
+        
+        newUser.signUpInBackgroundWithBlock {
+            (succeeded: Bool!, error: NSError!) -> Void in
+            if error == nil {
+                // Hooray! Let them use the app now.
+            } else {
+                // Show the errorString somewhere and let the user try again.
+                var alert = UIAlertController(title: "Error", message: error.description, preferredStyle: UIAlertControllerStyle.Alert)
+                alert.addAction(UIAlertAction(title: "Try Again", style: UIAlertActionStyle.Default, handler: nil))
+                self.presentViewController(alert, animated: true, completion: nil)
+                
+            }
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "init.png")!)
@@ -57,10 +107,11 @@ class ViewController: UIViewController {
         lgPassField.hidden = true
         lgGo.hidden = true
         accEmailField.hidden = true
-        accUserField.hidden = true
         accConfirmPassField.hidden = true
         accPassField.hidden = true
         accGo.hidden = true
+        lgButton.hidden = false
+        accButton.hidden = false
     }
 
     
