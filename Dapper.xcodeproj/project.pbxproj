@@ -38,6 +38,7 @@
 		9EF602C71AD059A3005426D2 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF602C61AD059A3005426D2 /* SwiftyJSON.swift */; };
 		D55826B21AD05F2A00DA878F /* mens_collection.json in Resources */ = {isa = PBXBuildFile; fileRef = D55826B11AD05F2A00DA878F /* mens_collection.json */; };
 		D55826B41AD05FB000DA878F /* CatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55826B31AD05FB000DA878F /* CatalogViewController.swift */; };
+		D55826B61AD073FA00DA878F /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55826B51AD073FA00DA878F /* CollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		9EF602C61AD059A3005426D2 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		D55826B11AD05F2A00DA878F /* mens_collection.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mens_collection.json; sourceTree = "<group>"; };
 		D55826B31AD05FB000DA878F /* CatalogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogViewController.swift; sourceTree = "<group>"; };
+		D55826B51AD073FA00DA878F /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 				9E3EC1D61ACF766A008F3C08 /* LaunchScreen.xib */,
 				9E3EC1CB1ACF766A008F3C08 /* Supporting Files */,
 				D55826B31AD05FB000DA878F /* CatalogViewController.swift */,
+				D55826B51AD073FA00DA878F /* CollectionViewCell.swift */,
 			);
 			name = Dapper;
 			path = Dappr;
@@ -329,6 +332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D55826B61AD073FA00DA878F /* CollectionViewCell.swift in Sources */,
 				D55826B41AD05FB000DA878F /* CatalogViewController.swift in Sources */,
 				9EF602C71AD059A3005426D2 /* SwiftyJSON.swift in Sources */,
 				9E3EC1D01ACF766A008F3C08 /* ViewController.swift in Sources */,

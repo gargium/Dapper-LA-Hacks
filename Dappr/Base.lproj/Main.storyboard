@@ -250,7 +250,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="54W-mp-Nnm">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="54W-mp-Nnm">
                                 <rect key="frame" x="0.0" y="38" width="600" height="600"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nPA-jo-cjY">
                                     <size key="itemSize" width="50" height="50"/>
@@ -259,7 +259,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="G6M-0q-hD8">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="G6M-0q-hD8" customClass="CollectionViewCell" customModule="Dapper" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -272,6 +272,13 @@
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="54W-mp-Nnm" firstAttribute="leading" secondItem="sPD-Lj-FRG" secondAttribute="leading" id="RkR-tQ-U56"/>
+                            <constraint firstAttribute="bottom" secondItem="54W-mp-Nnm" secondAttribute="bottom" id="Rwe-ts-q6T"/>
+                            <constraint firstItem="54W-mp-Nnm" firstAttribute="top" secondItem="sPD-Lj-FRG" secondAttribute="top" id="r7R-ag-PI3"/>
+                            <constraint firstAttribute="trailing" secondItem="54W-mp-Nnm" secondAttribute="trailing" id="vVy-xC-xwJ"/>
+                            <constraint firstAttribute="centerX" secondItem="54W-mp-Nnm" secondAttribute="centerX" id="vdD-hH-vr6"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Catalog" id="iVO-XM-AgC"/>
                 </viewController>
