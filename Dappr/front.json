@@ -1,0 +1,314 @@
+{
+    "name": "Gap",
+    "count": 55,
+    "frequency": "Manual Crawl",
+    "version": 1,
+    "newdata": true,
+    "lastrunstatus": "success",
+    "lastsuccess": "Sat Apr 04 2015 18:15:10 GMT+0000 (UTC)",
+    "thisversionstatus": "success",
+    "thisversionrun": "Sat Apr 04 2015 18:15:10 GMT+0000 (UTC)",
+    "results": {
+        "collection1": [{
+            "img": {
+                "text": "",
+                "href": "http://www.gap.com/browse/product.do?cid=1017035&vid=1&pid=224989012",
+                "alt": "Epaulette sweater",
+                "src": "http://www3.assets-gap.com/webcontent/0009/155/297/cn9155297.jpg"
+            },
+            "name": {
+                "text": "Epaulette sweater",
+                "href": "http://www.gap.com/browse/product.do?cid=1017035&vid=1&pid=224989012"
+            },
+            "price": "$47.99"
+        }, {
+            "img": {
+                "text": "",
+                "href": "http://www.gap.com/browse/product.do?cid=1017035&vid=1&pid=224989002",
+                "alt": "Epaulette sweater",
+                "src": "http://www1.assets-gap.com/webcontent/0009/140/825/cn9140825.jpg"
+            },
+            "name": {
+                "text": "Epaulette sweater",
+                "href": "http://www.gap.com/browse/product.do?cid=1017035&vid=1&pid=224989002"
+            },
+            "price": "$44.99"
+        }, {
+            "img": {
+                "text": "",
+                "href": "http://www.gap.com/browse/product.do?cid=1017035&vid=1&pid=142850012",
+                "alt": "Textured crew sweater",
+                "src": "http://www3.assets-gap.com/webcontent/0009/191/817/cn9191817.jpg"
+            },
+            "name": {
+                "text": "Textured crew sweater",
+                "href": "http://www.gap.com/browse/product.do?cid=1017035&vid=1&pid=142850012"
+            },
+            "price": "$41.99"
+        }, {
+            "img": {
+                "text": "",
+                "href": "http://www.gap.com/browse/product.do?cid=1017035&vid=1&pid=142850002",
+                "alt": "Textured crew sweater",
+                "src": "http://www1.assets-gap.com/webcontent/0009/200/047/cn9200047.jpg"
+            },
+            "name": {
+                "text": "Textured crew sweater",
+                "href": "http://www.gap.com/browse/product.do?cid=1017035&vid=1&pid=142850002"
+            },
+            "price": "$41.99"
+        }, {
+            "img": {
+                "text": "",
+                "href": "http://www.gap.com/browse/product.do?cid=1017035&vid=1&pid=981561122",
+                "alt": "Cotton cashmere crew sweater",
+                "src": "http://www3.assets-gap.com/webcontent/0009/141/291/cn9141291.jpg"
+            },
+            "name": {
+                "text": "Cotton cashmere crew sweater",
+                "href": "http://www.gap.com/browse/product.do?cid=1017035&vid=1&pid=981561122"
+            },
+            "price": "$39.99"
+        }, {
+            "img": {
+                "text": "",
+                "href": "http://www.gap.com/browse/product.do?cid=1017035&vid=1&pid=981561152",
+                "alt": "Cotton cashmere crew sweater",
+                "src": "http://www3.assets-gap.com/webcontent/0009/145/572/cn9145572.jpg"
+            },
+            "name": {
+                "text": "Cotton cashmere crew sweater",
+                "href": "http://www.gap.com/browse/product.do?cid=1017035&vid=1&pid=981561152"
+            },
+            "price": "$39.99"
+        }, {
+            "img": {
+                "text": "",
+                "href": "http://www.gap.com/browse/product.do?cid=1017035&vid=1&pid=981561132",
+                "alt": "Cotton cashmere crew sweater",
+                "src": "http://www1.assets-gap.com/webcontent/0009/351/744/cn9351744.jpg"
+            },
+            "name": {
+                "text": "Cotton cashmere crew sweater",
+                "href": "http://www.gap.com/browse/product.do?cid=1017035&vid=1&pid=981561132"
+            },
+            "price": "$39.99"
+        }, {
+            "img": {
+                "text": "",
+                "href": "http://www.gap.com/browse/product.do?cid=1017035&vid=1&pid=981561142",
+                "alt": "Cotton cashmere crew sweater",
+                "src": "http://www1.assets-gap.com/webcontent/0009/198/564/cn9198564.jpg"
+            },
+            "name": {
+                "text": "Cotton cashmere crew sweater",
+                "href": "http://www.gap.com/browse/product.do?cid=1017035&vid=1&pid=981561142"
+            },
+            "price": "$39.99"
+        }, {
+            "img": {
+                "text": "",
+                "href": "http://www.gap.com/browse/product.do?cid=1017035&vid=1&pid=226068012",
+                "alt": "Side-zip sweatshirt",
+                "src": "http://www1.assets-gap.com/webcontent/0009/156/164/cn9156164.jpg"
+            },
+            "name": {
+                "text": "Side-zip sweatshirt",
+                "href": "http://www.gap.com/browse/product.do?cid=1017035&vid=1&pid=226068012"
+            },
+            "price": "$39.99"
+        }, {
+            "img": {
+                "text": "",
+                "href": "http://www.gap.com/browse/product.do?cid=1017035&vid=1&pid=142629012",
+                "alt": "French ribbed shawl cardigan",
+                "src": "http://www1.assets-gap.com/webcontent/0009/040/373/cn9040373.jpg"
+            },
+            "name": {
+                "text": "French ribbed shawl cardigan",
+                "href": "http://www.gap.com/browse/product.do?cid=1017035&vid=1&pid=142629012"
+            },
+            "price": "$47.99"
+        }, {
+            "img": {
+                "text": "",
+                "href": "http://www.gap.com/browse/product.do?cid=1017035&vid=1&pid=142630002",
+                "alt": "Stripe shawl sweater",
+                "src": "http://www3.assets-gap.com/webcontent/0008/916/744/cn8916744.jpg"
+            },
+            "name": {
+                "text": "Stripe shawl sweater",
+                "href": "http://www.gap.com/browse/product.do?cid=1017035&vid=1&pid=142630002"
+            },
+            "price": "$43.99"
+        }, {
+            "img": {
+                "text": "",
+                "href": "http://www.gap.com/browse/product.do?cid=1017035&vid=1&pid=989787002",
+                "alt": "Lived-in heavyweight fleece hoodie",
+                "src": "http://www1.assets-gap.com/webcontent/0008/888/356/cn8888356.jpg"
+            },
+            "name": {
+                "text": "Lived-in heavyweight fleece hoodie",
+                "href": "http://www.gap.com/browse/product.do?cid=1017035&vid=1&pid=989787002"
+            },
+            "price": "$39.99"
+        }, {
+            "img": {
+                "text": "",
+                "href": "http://www.gap.com/browse/product.do?cid=1017035&vid=1&pid=225053002",
+                "alt": "1969 shirt jacket",
+                "src": "http://www1.assets-gap.com/webcontent/0009/285/559/cn9285559.jpg"
+            },
+            "name": {
+                "text": "1969 shirt jacket",
+                "href": "http://www.gap.com/browse/product.do?cid=1017035&vid=1&pid=225053002"
+            },
+            "price": "$71.99"
+        }, {
+            "img": {
+                "text": "",
+                "href": "http://www.gap.com/browse/product.do?cid=1017035&vid=1&pid=140673002",
+                "alt": "3-in-1 carpenter jacket",
+                "src": "http://www3.assets-gap.com/webcontent/0008/909/638/cn8909638.jpg"
+            },
+            "name": {
+                "text": "3-in-1 carpenter jacket",
+                "href": "http://www.gap.com/browse/product.do?cid=1017035&vid=1&pid=140673002"
+            },
+            "price": "$94.99"
+        }, {
+            "img": {
+                "text": "",
+                "href": "http://www.gap.com/browse/product.do?cid=1017035&vid=1&pid=226158002",
+                "alt": "Lived-in french terry bomber jacket",
+                "src": "http://www3.assets-gap.com/webcontent/0009/211/604/cn9211604.jpg"
+            },
+            "name": {
+                "text": "Lived-in french terry bomber jacket",
+                "href": "http://www.gap.com/browse/product.do?cid=1017035&vid=1&pid=226158002"
+            },
+            "price": "$43.99"
+        }, {
+            "img": {
+                "text": "",
+                "href": "http://www.gap.com/browse/product.do?cid=1017035&vid=1&pid=225337022",
+                "alt": "Lived-in wash spring gingham shirt",
+                "src": "http://www1.assets-gap.com/webcontent/0009/156/102/cn9156102.jpg"
+            },
+            "name": {
+                "text": "Lived-in wash spring gingham shirt",
+                "href": "http://www.gap.com/browse/product.do?cid=1017035&vid=1&pid=225337022"
+            },
+            "price": "$37.99"
+        }, {
+            "img": {
+                "text": "",
+                "href": "http://www.gap.com/browse/product.do?cid=1017035&vid=1&pid=225302022",
+                "alt": "Delancey stripe worker shirt",
+                "src": "http://www1.assets-gap.com/webcontent/0009/426/315/cn9426315.jpg"
+            },
+            "name": {
+                "text": "Delancey stripe worker shirt",
+                "href": "http://www.gap.com/browse/product.do?cid=1017035&vid=1&pid=225302022"
+            },
+            "price": "$29.99"
+        }, {
+            "img": {
+                "text": "",
+                "href": "http://www.gap.com/browse/product.do?cid=1017035&vid=1&pid=225440002",
+                "alt": "1969 indigo float shirt",
+                "src": "http://www1.assets-gap.com/webcontent/0009/211/632/cn9211632.jpg"
+            },
+            "name": {
+                "text": "1969 indigo float shirt",
+                "href": "http://www.gap.com/browse/product.do?cid=1017035&vid=1&pid=225440002"
+            },
+            "price": "$43.99"
+        }, {
+            "img": {
+                "text": "",
+                "href": "http://www.gap.com/browse/product.do?cid=1017035&vid=1&pid=225015012",
+                "alt": "Cable knit sweater",
+                "src": "http://www1.assets-gap.com/webcontent/0009/145/429/cn9145429.jpg"
+            },
+            "name": {
+                "text": "Cable knit sweater",
+                "href": "http://www.gap.com/browse/product.do?cid=1017035&vid=1&pid=225015012"
+            },
+            "price": "$48.99"
+        }, {
+            "img": {
+                "text": "",
+                "href": "http://www.gap.com/browse/product.do?cid=1017035&vid=1&pid=224998012",
+                "alt": "Stripe bateau sweater",
+                "src": "http://www1.assets-gap.com/webcontent/0009/140/807/cn9140807.jpg"
+            },
+            "name": {
+                "text": "Stripe bateau sweater",
+                "href": "http://www.gap.com/browse/product.do?cid=1017035&vid=1&pid=224998012"
+            },
+            "price": "$43.99"
+        }, {
+            "img": {
+                "text": "",
+                "href": "http://www.gap.com/browse/product.do?cid=1017035&vid=1&pid=225011002",
+                "alt": "Intarsia G shawl sweater",
+                "src": "http://www1.assets-gap.com/webcontent/0009/155/308/cn9155308.jpg"
+            },
+            "name": {
+                "text": "Intarsia G shawl sweater",
+                "href": "http://www.gap.com/browse/product.do?cid=1017035&vid=1&pid=225011002"
+            },
+            "price": "$51.99"
+        }, {
+            "img": {
+                "text": "",
+                "href": "http://www.gap.com/browse/product.do?cid=1017035&vid=1&pid=142653032",
+                "alt": "Mixed marled sweater",
+                "src": "http://www3.assets-gap.com/webcontent/0009/037/361/cn9037361.jpg"
+            },
+            "name": {
+                "text": "Mixed marled sweater",
+                "href": "http://www.gap.com/browse/product.do?cid=1017035&vid=1&pid=142653032"
+            },
+            "price": "$43.99"
+        }, {
+            "img": {
+                "text": "",
+                "href": "http://www.gap.com/browse/product.do?cid=1017035&vid=1&pid=224993012",
+                "alt": "Mixed media sweater hoodie",
+                "src": "http://www1.assets-gap.com/webcontent/0009/140/797/cn9140797.jpg"
+            },
+            "name": {
+                "text": "Mixed media sweater hoodie",
+                "href": "http://www.gap.com/browse/product.do?cid=1017035&vid=1&pid=224993012"
+            },
+            "price": "$48.99"
+        }, {
+            "img": {
+                "text": "",
+                "href": "http://www.gap.com/browse/product.do?cid=1017035&vid=1&pid=142232002",
+                "alt": "Toggle double-stripe shawl cardigan",
+                "src": "http://www1.assets-gap.com/webcontent/0009/037/328/cn9037328.jpg"
+            },
+            "name": {
+                "text": "Toggle double-stripe shawl cardigan",
+                "href": "http://www.gap.com/browse/product.do?cid=1017035&vid=1&pid=142232002"
+            },
+            "price": "$78.99"
+        }, {
+            "img": {
+                "text": "",
+                "href": "http://www.gap.com/browse/product.do?cid=1017035&vid=1&pid=225008002",
+                "alt": "Marled colorblock shawl cardigan",
+                "src": "http://www1.assets-gap.com/webcontent/0009/155/269/cn9155269.jpg"
+            },
+            "name": {
+                "text": "Marled colorblock shawl cardigan",
+                "href": "http://www.gap.com/browse/product.do?cid=1017035&vid=1&pid=225008002"
+            },
+            "price": "$59.99"
+        }]
+    }
+}
