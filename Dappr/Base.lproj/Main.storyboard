@@ -159,7 +159,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Shopping Cart" id="hAe-kR-wf8"/>
+                    <navigationItem key="navigationItem" title="Outfit Builder" id="hAe-kR-wf8"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iwa-fu-Jwh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -312,7 +312,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K8s-cS-uR5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2507" y="-1471"/>
+            <point key="canvasLocation" x="2492" y="-1471"/>
         </scene>
         <!--MyGap-->
         <scene sceneID="gmO-ni-AjS">
@@ -325,13 +325,24 @@
                     <view key="view" contentMode="scaleToFill" id="qZY-Ay-HcC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="11131105_10152818278813301_1058527528_o.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="cA0-4d-eM7">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="cA0-4d-eM7" secondAttribute="trailing" constant="-16" id="9cn-FJ-gv6"/>
+                            <constraint firstItem="dbc-BZ-tVa" firstAttribute="top" secondItem="cA0-4d-eM7" secondAttribute="bottom" id="FiK-RS-LV6"/>
+                            <constraint firstItem="cA0-4d-eM7" firstAttribute="top" secondItem="8sE-Td-bXM" secondAttribute="bottom" id="Hxv-hf-AQ4"/>
+                            <constraint firstItem="cA0-4d-eM7" firstAttribute="leading" secondItem="qZY-Ay-HcC" secondAttribute="leadingMargin" constant="-16" id="tQw-4l-HE1"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="myGap" id="Qny-hm-9wp"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gNc-gJ-41g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2487" y="1137"/>
+            <point key="canvasLocation" x="2492" y="1137"/>
         </scene>
         <!--Catalog-->
         <scene sceneID="FQU-Ua-h5v">
@@ -375,7 +386,7 @@
         <!--Favorites-->
         <scene sceneID="CHu-4C-1f8">
             <objects>
-                <viewController id="DSU-hV-6hM" sceneMemberID="viewController">
+                <viewController id="DSU-hV-6hM" customClass="FavoritesViewController" customModule="Dapper" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="39e-AP-MHD"/>
                         <viewControllerLayoutGuide type="bottom" id="2ad-61-dnE"/>
@@ -574,7 +585,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z9q-XD-WY0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1841" y="-817"/>
+            <point key="canvasLocation" x="1832" y="-817"/>
         </scene>
         <!--Shopping Cart-->
         <scene sceneID="Tzt-Ji-mfD">
@@ -597,6 +608,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="11131105_10152818278813301_1058527528_o.jpg" width="600" height="1029"/>
         <image name="300px-Gap_logo.png" width="300" height="300"/>
         <image name="Like-32.png" width="32" height="32"/>
         <image name="Price Tag-32.png" width="32" height="32"/>

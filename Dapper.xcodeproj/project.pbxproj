@@ -48,6 +48,8 @@
 		9EF609801AD0EEB1005426D2 /* Switch-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EF6097F1AD0EEB1005426D2 /* Switch-32.png */; };
 		9EF609821AD0EF4B005426D2 /* Settings-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EF609811AD0EF4B005426D2 /* Settings-32.png */; };
 		9EF609841AD0EFC4005426D2 /* Price Tag-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EF609831AD0EFC4005426D2 /* Price Tag-32.png */; };
+		9EF609881AD125FE005426D2 /* 11131105_10152818278813301_1058527528_o.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9EF609871AD125FE005426D2 /* 11131105_10152818278813301_1058527528_o.jpg */; };
+		9EF6098A1AD12A9F005426D2 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF609891AD12A9F005426D2 /* FavoritesViewController.swift */; };
 		D55826B21AD05F2A00DA878F /* mens_collection.json in Resources */ = {isa = PBXBuildFile; fileRef = D55826B11AD05F2A00DA878F /* mens_collection.json */; };
 		D55826B41AD05FB000DA878F /* CatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55826B31AD05FB000DA878F /* CatalogViewController.swift */; };
 		D55826B61AD073FA00DA878F /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55826B51AD073FA00DA878F /* CollectionViewCell.swift */; };
@@ -110,6 +112,8 @@
 		9EF6097F1AD0EEB1005426D2 /* Switch-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Switch-32.png"; sourceTree = "<group>"; };
 		9EF609811AD0EF4B005426D2 /* Settings-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Settings-32.png"; sourceTree = "<group>"; };
 		9EF609831AD0EFC4005426D2 /* Price Tag-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Price Tag-32.png"; sourceTree = "<group>"; };
+		9EF609871AD125FE005426D2 /* 11131105_10152818278813301_1058527528_o.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 11131105_10152818278813301_1058527528_o.jpg; sourceTree = "<group>"; };
+		9EF609891AD12A9F005426D2 /* FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		D55826B11AD05F2A00DA878F /* mens_collection.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mens_collection.json; sourceTree = "<group>"; };
 		D55826B31AD05FB000DA878F /* CatalogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogViewController.swift; sourceTree = "<group>"; };
 		D55826B51AD073FA00DA878F /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
@@ -157,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				9EF609831AD0EFC4005426D2 /* Price Tag-32.png */,
+				9EF609871AD125FE005426D2 /* 11131105_10152818278813301_1058527528_o.jpg */,
 				9EF609811AD0EF4B005426D2 /* Settings-32.png */,
 				9EF6097F1AD0EEB1005426D2 /* Switch-32.png */,
 				9EF6097B1AD0EDBA005426D2 /* Like-32.png */,
@@ -187,6 +192,7 @@
 				9E3EC1ED1ACF97B2008F3C08 /* init.png */,
 				9EF602C21AD054AA005426D2 /* init2.png */,
 				9EF609721AD09A0A005426D2 /* Main.storyboard */,
+				9EF609891AD12A9F005426D2 /* FavoritesViewController.swift */,
 				9EF6096A1AD0995A005426D2 /* FeaturedCell.swift */,
 				9EF609771AD0D1B2005426D2 /* 300px-Gap_logo.png */,
 				9EF6096B1AD0995A005426D2 /* FeaturedViewController.swift */,
@@ -354,6 +360,7 @@
 				9EF609701AD0995A005426D2 /* front.json in Resources */,
 				9EF6097C1AD0EDBA005426D2 /* Like-32.png in Resources */,
 				9EF602C31AD054AA005426D2 /* init2.png in Resources */,
+				9EF609881AD125FE005426D2 /* 11131105_10152818278813301_1058527528_o.jpg in Resources */,
 				9E3EC1D81ACF766A008F3C08 /* LaunchScreen.xib in Resources */,
 				9EF609841AD0EFC4005426D2 /* Price Tag-32.png in Resources */,
 				9EF609801AD0EEB1005426D2 /* Switch-32.png in Resources */,
@@ -378,6 +385,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D55826B61AD073FA00DA878F /* CollectionViewCell.swift in Sources */,
+				9EF6098A1AD12A9F005426D2 /* FavoritesViewController.swift in Sources */,
 				D55826B41AD05FB000DA878F /* CatalogViewController.swift in Sources */,
 				9EF602C71AD059A3005426D2 /* SwiftyJSON.swift in Sources */,
 				9EF609711AD0995A005426D2 /* Repository.swift in Sources */,

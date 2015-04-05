@@ -28,6 +28,7 @@ class FeaturedCell : UITableViewCell {
     var delegate: TableViewCellDelegate?
     // The item that this cell renders.
     var featureCell: FeaturedCell?
+    var isAFavorite = false
     
     
     func setContents(name: String, desc: String, imgData: NSData) {
@@ -65,6 +66,8 @@ class FeaturedCell : UITableViewCell {
             if !deleteOnDragRelease {
                 // if the item is not being deleted, snap back to the original location
                 UIView.animateWithDuration(0.2, animations: {self.frame = originalFrame})
+                isAFavorite = true;
+
             }
             if deleteOnDragRelease {
                 if delegate != nil && featureCell != nil {

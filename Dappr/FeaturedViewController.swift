@@ -73,9 +73,9 @@ class FeaturedViewController : UIViewController, UITableViewDataSource, UITableV
             cell!.setContents(nameObj!, desc: "submitted by anonymous user", imgData: data!)
         }
 
-//        }
-//        cell?.delegate = self
-//        cell?.featureCell = cell
+//       }
+        cell?.delegate = self
+        cell?.featureCell = cell
         return cell!
     }
     
