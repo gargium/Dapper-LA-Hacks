@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class FeaturedViewController : UIViewController, UITableViewDataSource, TableViewCellDelegate {
+class FeaturedViewController : UIViewController, UITableViewDataSource, UITableViewDelegate, TableViewCellDelegate {
     var json : JSON?
     
     @IBOutlet weak var TableView: UITableView!
@@ -35,19 +35,11 @@ class FeaturedViewController : UIViewController, UITableViewDataSource, TableVie
             }
     }
     
-//    func printJSON(jsonFileName : String) {
-//        if let path = NSBundle.mainBundle().pathForResource(jsonFileName, ofType: "json") {
-//            if let data = NSData(contentsOfMappedFile: path) {
-//                let json = JSON(data: data, options: NSJSONReadingOptions.AllowFragments, error: nil)
-//                println("jsonData:\(json)")
-//            }
-//        }
-//    }
-//    
+
     var repositories = [Repository]()
     
-    func toDoItemDeleted(toDoItem: FeaturedCell) {
-        let index = (repositories as NSArray).indexOfObject(toDoItem)
+    func toDoItemDeleted(featureCell: FeaturedCell) {
+        let index = (repositories as NSArray).indexOfObject(featureCell)
         if index == NSNotFound { return }
         
         // could removeAtIndex in the loop but keep it here for when indexOfObject works
@@ -82,8 +74,8 @@ class FeaturedViewController : UIViewController, UITableViewDataSource, TableVie
         }
 
 //        }
-        cell?.delegate = self
-        cell?.FeaturedCellDeleted = cell
+//        cell?.delegate = self
+//        cell?.featureCell = cell
         return cell!
     }
     
@@ -91,6 +83,7 @@ class FeaturedViewController : UIViewController, UITableViewDataSource, TableVie
         return 320
         
     }
+
 
     
 

@@ -27,7 +27,7 @@ class FeaturedCell : UITableViewCell {
     // The object that acts as delegate for this cell.
     var delegate: TableViewCellDelegate?
     // The item that this cell renders.
-    var FeaturedCellDeleted: FeaturedCell?
+    var featureCell: FeaturedCell?
     
     
     func setContents(name: String, desc: String, imgData: NSData) {
@@ -67,9 +67,9 @@ class FeaturedCell : UITableViewCell {
                 UIView.animateWithDuration(0.2, animations: {self.frame = originalFrame})
             }
             if deleteOnDragRelease {
-                if delegate != nil && FeaturedCellDeleted != nil {
+                if delegate != nil && featureCell != nil {
                     // notify the delegate that this item should be deleted
-                    delegate!.toDoItemDeleted(FeaturedCellDeleted!)
+                    delegate!.toDoItemDeleted(featureCell!)
                 }
             }
         }
