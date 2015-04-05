@@ -19,7 +19,6 @@ class CollectionViewCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
         imageView = UIImageView(frame: CGRect(x: 0, y: 16, width: frame.size.width, height: frame.size.height*2/3))
         imageView.contentMode = UIViewContentMode.ScaleAspectFit
         contentView.addSubview(imageView)
@@ -30,4 +29,5 @@ class CollectionViewCell: UICollectionViewCell {
         textLabel.textAlignment = .Center
         contentView.addSubview(textLabel)
     }
+    
 }
