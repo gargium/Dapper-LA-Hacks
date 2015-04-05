@@ -35,15 +35,14 @@ class CatalogViewController: UIViewController, UICollectionViewDelegateFlowLayou
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // number of elems
-        let x = self.json!["mens"]["bananaRepublic"]["polos"]
-        println(x.array!.count)
+        let x = self.json![globalGender.gender][globalBrand.brand][globalItemType.itemType]
         return x.array!.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CollectionViewCell", forIndexPath: indexPath) as CollectionViewCell
         cell.backgroundColor = UIColor.blackColor()
-        let url = NSURL(string: self.json!["mens"]["bananaRepublic"]["polos"][indexPath.row]["img"]["src"].string!)
+        let url = NSURL(string: self.json![globalGender.gender][globalBrand.brand][globalItemType.itemType][indexPath.row]["img"]["src"].string!)
         let data = NSData(contentsOfURL: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check
         if data != nil{
             var bgImage = UIImage(data: data!)

@@ -41,7 +41,7 @@ class ViewController: UIViewController {
             PFUser.logInWithUsernameInBackground(lgUserField.text, password:lgPassField.text) {
                 (user: PFUser!, error: NSError!) -> Void in
                 if user != nil {
-                    //user exists
+                    self.performSegueWithIdentifier("titleToTab", sender: self)
                 } else {
                     var alert = UIAlertController(title: "Error", message: "A user matching this username and password was not found in our system", preferredStyle: UIAlertControllerStyle.Alert)
                     alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default, handler: nil))
@@ -90,7 +90,7 @@ class ViewController: UIViewController {
         newUser.signUpInBackgroundWithBlock {
             (succeeded: Bool!, error: NSError!) -> Void in
             if error == nil {
-                // Hooray! Let them use the app now.
+                self.performSegueWithIdentifier("titleToTab", sender: self)
             } else {
                 // Show the errorString somewhere and let the user try again.
                 var alert = UIAlertController(title: "Error", message: error.description, preferredStyle: UIAlertControllerStyle.Alert)
