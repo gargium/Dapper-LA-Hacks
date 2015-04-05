@@ -306,10 +306,13 @@
                     <navigationItem key="navigationItem" title="Featured Outfits" id="fNI-79-SyV"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="TableView" destination="d4j-ba-Z2l" id="01Y-ia-hp2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K8s-cS-uR5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2675" y="-1474"/>
+            <point key="canvasLocation" x="2507" y="-1471"/>
         </scene>
         <!--MyGap-->
         <scene sceneID="gmO-ni-AjS">

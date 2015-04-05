@@ -9,11 +9,10 @@
 import Foundation
 import UIKit
 
-
-
-class FeaturedViewController : UIViewController, UITableViewDataSource {
+class FeaturedViewController : UIViewController, UITableViewDataSource, TableViewCellDelegate {
     var json : JSON?
     
+    @IBOutlet weak var TableView: UITableView!
         override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -47,6 +46,20 @@ class FeaturedViewController : UIViewController, UITableViewDataSource {
 //    
     var repositories = [Repository]()
     
+    func toDoItemDeleted(toDoItem: FeaturedCell) {
+        let index = (repositories as NSArray).indexOfObject(toDoItem)
+        if index == NSNotFound { return }
+        
+        // could removeAtIndex in the loop but keep it here for when indexOfObject works
+        repositories.removeAtIndex(index)
+        
+        // use the UITableView to animate the removal of this row
+        TableView.beginUpdates()
+        let indexPathForRow = NSIndexPath(forRow: index, inSection: 0)
+        TableView.deleteRowsAtIndexPaths([indexPathForRow], withRowAnimation: .Fade)
+        TableView.endUpdates()
+    }
+    
      func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return repositories.count
     }
@@ -63,12 +76,14 @@ class FeaturedViewController : UIViewController, UITableViewDataSource {
         println(data)
         if cell != nil && data != nil {
             println(imgObj)
+            cell?.selectionStyle = .None
             //cell!.setContents(nameObj!, desc: descObj!, imgData: data!)
             cell!.setContents(nameObj!, desc: "submitted by anonymous user", imgData: data!)
         }
 
 //        }
-
+        cell?.delegate = self
+        cell?.FeaturedCellDeleted = cell
         return cell!
     }
     
