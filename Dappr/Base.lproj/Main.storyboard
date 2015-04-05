@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D113c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -79,7 +79,6 @@
                                 </state>
                                 <connections>
                                     <action selector="lgGoPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="jPu-TF-8TK"/>
-                                    <segue destination="tPG-HC-0GZ" kind="show" id="JEM-UF-tOi"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="37w-Zm-ORH">
@@ -140,11 +139,164 @@
                         <outlet property="lgGo" destination="5OI-HZ-122" id="mLN-YW-qzn"/>
                         <outlet property="lgPassField" destination="hFx-lu-Hfy" id="ZOh-MM-HAA"/>
                         <outlet property="lgUserField" destination="32Y-dJ-Al7" id="oMs-ap-aLO"/>
+                        <segue destination="tPG-HC-0GZ" kind="showDetail" identifier="titleToTab" id="c0d-yK-T7I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="158" y="-429"/>
+        </scene>
+        <!--Gender Controller-->
+        <scene sceneID="0Wm-cZ-QMA">
+            <objects>
+                <viewController id="7MD-tz-mrq" customClass="genderController" customModule="Dapper" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tqI-5Q-dua"/>
+                        <viewControllerLayoutGuide type="bottom" id="1Nx-Ov-Coe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FFO-1O-IOF">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="male_Button" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jva-Hk-b0L">
+                                <rect key="frame" x="272" y="182" width="30" height="30"/>
+                                <state key="normal" title="Men">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="maleButton:" destination="7MD-tz-mrq" eventType="touchUpInside" id="pkT-ei-4gj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="female_Button" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xxt-tv-Zk6">
+                                <rect key="frame" x="253" y="284" width="68" height="32"/>
+                                <state key="normal" title="Women">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="femaleButton:" destination="7MD-tz-mrq" eventType="touchUpInside" id="XFk-sq-uKG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="99e-P4-To9"/>
+                    <connections>
+                        <segue destination="XbD-t0-UW4" kind="show" identifier="genderToMaleBrand" id="qxg-cE-Yhc"/>
+                        <segue destination="pY3-do-MJG" kind="show" identifier="genderToFemaleBrand" id="9CV-ON-9QC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uxs-61-VHu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2487" y="-166"/>
+        </scene>
+        <!--M Brand Controller-->
+        <scene sceneID="wip-vj-dTq">
+            <objects>
+                <viewController id="XbD-t0-UW4" customClass="mBrandController" customModule="Dapper" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bS5-4t-zIH"/>
+                        <viewControllerLayoutGuide type="bottom" id="1pI-SB-OJO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jQQ-nj-URx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZPL-rf-UHs">
+                                <rect key="frame" x="244" y="196" width="46" height="30"/>
+                                <state key="normal" title="Gap">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="male_gap:" destination="XbD-t0-UW4" eventType="touchUpInside" id="HAT-rY-b0h"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="88R-NZ-uzP">
+                                <rect key="frame" x="233" y="274" width="68" height="30"/>
+                                <state key="normal" title="Old Navy">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="male_oldnavy:" destination="XbD-t0-UW4" eventType="touchUpInside" id="nN0-eg-NQf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WVV-NB-zg6">
+                                <rect key="frame" x="202" y="362" width="131" height="30"/>
+                                <state key="normal" title="Banana Republic">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="male_bananaRepublic:" destination="XbD-t0-UW4" eventType="touchUpInside" id="plA-Lf-MID"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="G8G-50-WcL" kind="show" identifier="m_brandtotype" id="BkO-A2-8JR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mwm-vz-Eja" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3203" y="-530"/>
+        </scene>
+        <!--M Type Controller-->
+        <scene sceneID="qgh-Kl-iie">
+            <objects>
+                <viewController id="G8G-50-WcL" customClass="mTypeController" customModule="Dapper" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3Fn-If-ZFA"/>
+                        <viewControllerLayoutGuide type="bottom" id="WAU-xC-q7K"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Wid-Ue-04h">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xi2-xa-Wtj">
+                                <rect key="frame" x="277" y="170" width="46" height="30"/>
+                                <state key="normal" title="Pants">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="male_pants:" destination="G8G-50-WcL" eventType="touchUpInside" id="4VV-sF-xP5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyM-ZC-RHC">
+                                <rect key="frame" x="277" y="242" width="46" height="30"/>
+                                <state key="normal" title="Shorts">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="male_shorts:" destination="G8G-50-WcL" eventType="touchUpInside" id="An6-tP-yrs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XZm-X8-jLt">
+                                <rect key="frame" x="277" y="376" width="46" height="30"/>
+                                <state key="normal" title="Shoes">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="male_shoes:" destination="G8G-50-WcL" eventType="touchUpInside" id="zrj-AK-QiJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sy5-sz-IJC">
+                                <rect key="frame" x="277" y="310" width="46" height="30"/>
+                                <state key="normal" title="Polos">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="male_polos:" destination="G8G-50-WcL" eventType="touchUpInside" id="JcD-ur-Owp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="wPR-be-2ZI" kind="show" identifier="mTypeToCatalog" id="W7F-Pb-YdG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3fR-f5-jsu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3965" y="-530"/>
         </scene>
         <!--Shopping Cart-->
         <scene sceneID="9Um-iv-3Bp">
@@ -164,6 +316,65 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iwa-fu-Jwh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2492" y="479"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="rgl-0Z-1lp">
+            <objects>
+                <viewController title="View Controller" id="pY3-do-MJG" customClass="fBrandController" customModule="Dapper" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZpE-WE-2dc"/>
+                        <viewControllerLayoutGuide type="bottom" id="iBs-V8-7gJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cjh-o5-gmx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1XG-yw-05d">
+                                <rect key="frame" x="277" y="189" width="46" height="30"/>
+                                <state key="normal" title="Gap">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="female_gap:" destination="pY3-do-MJG" eventType="touchUpInside" id="6mT-Kb-2F9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MuF-hh-W40">
+                                <rect key="frame" x="256" y="285" width="89" height="30"/>
+                                <state key="normal" title="Old Navy">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="female_oldnavy:" destination="pY3-do-MJG" eventType="touchUpInside" id="vSD-2w-07S"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wDL-6t-4jH">
+                                <rect key="frame" x="229" y="373" width="143" height="30"/>
+                                <state key="normal" title="Banana Republic">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="female_banRep:" destination="pY3-do-MJG" eventType="touchUpInside" id="yRZ-NY-Sny"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JJM-4O-WTA">
+                                <rect key="frame" x="259" y="441" width="83" height="30"/>
+                                <state key="normal" title="PiperLime">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="female_piperlime:" destination="pY3-do-MJG" eventType="touchUpInside" id="gF8-Uw-hEd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="ekY-jr-40o" kind="show" identifier="f_brandtotype" id="ht3-lD-gcg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="egC-da-DQa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3208" y="239"/>
         </scene>
         <!--Featured-->
         <scene sceneID="6vJ-7V-Ppj">
@@ -333,44 +544,64 @@
             </objects>
             <point key="canvasLocation" x="2487" y="1137"/>
         </scene>
-        <!--Catalog-->
-        <scene sceneID="FQU-Ua-h5v">
+        <!--Default-->
+        <scene sceneID="0HX-U5-HXj">
             <objects>
-                <viewController id="MPE-BM-ed5" sceneMemberID="viewController">
+                <viewController title="Default" id="ekY-jr-40o" customClass="fTypeController" customModule="Dapper" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="9sm-pg-fwO"/>
-                        <viewControllerLayoutGuide type="bottom" id="9Oq-3Q-g8J"/>
+                        <viewControllerLayoutGuide type="top" id="RxC-bD-h5m"/>
+                        <viewControllerLayoutGuide type="bottom" id="olR-Wl-yWC"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="sPD-Lj-FRG">
+                    <view key="view" contentMode="scaleToFill" id="zvv-no-Ipx">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKK-Ui-ky8">
-                                <rect key="frame" x="197" y="161" width="115" height="30"/>
-                                <state key="normal" title="Mens">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jF8-PA-KY4">
+                                <rect key="frame" x="277" y="205" width="46" height="30"/>
+                                <state key="normal" title="Jeans">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="AlM-2Q-x5k" kind="show" id="dgo-PD-MM2"/>
+                                    <action selector="f_jeans:" destination="ekY-jr-40o" eventType="touchUpInside" id="bfi-7n-nJX"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FBA-qh-rsA">
-                                <rect key="frame" x="203" y="345" width="102" height="30"/>
-                                <state key="normal" title="Womens">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VIC-4G-mWa">
+                                <rect key="frame" x="277" y="352" width="46" height="30"/>
+                                <state key="normal" title="Shoes">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="duQ-uj-Flf" kind="show" id="Q53-Kb-We2"/>
+                                    <action selector="f_shoes:" destination="ekY-jr-40o" eventType="touchUpInside" id="2lf-oP-1Eg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4vi-h6-Ils">
+                                <rect key="frame" x="277" y="306" width="46" height="30"/>
+                                <state key="normal" title="Tops">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="f_tops:" destination="ekY-jr-40o" eventType="touchUpInside" id="jCT-Mo-7VT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="THX-T3-lQ3">
+                                <rect key="frame" x="277" y="256" width="46" height="30"/>
+                                <state key="normal" title="Skirts">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="f_skirts:" destination="ekY-jr-40o" eventType="touchUpInside" id="7aJ-b9-0K4"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Catalog" id="iVO-XM-AgC"/>
+                    <connections>
+                        <segue destination="wPR-be-2ZI" kind="show" identifier="fTypeToCatalog" id="HX7-31-gTY"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Xar-Hf-DqJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YJW-3X-G0E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2492" y="-166"/>
+            <point key="canvasLocation" x="3958" y="245"/>
         </scene>
         <!--Favorites-->
         <scene sceneID="CHu-4C-1f8">
@@ -513,7 +744,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="MPE-BM-ed5" kind="relationship" relationship="rootViewController" id="yLd-Eu-Wwh"/>
+                        <segue destination="7MD-tz-mrq" kind="relationship" relationship="rootViewController" id="b5D-dT-CWn"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Od-Oj-M0F" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -595,6 +826,54 @@
             </objects>
             <point key="canvasLocation" x="1841" y="479"/>
         </scene>
+        <!--Catalog-->
+        <scene sceneID="dJN-EV-h7r">
+            <objects>
+                <viewController id="wPR-be-2ZI" customClass="CatalogViewController" customModule="Dapper" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iHH-89-iDV"/>
+                        <viewControllerLayoutGuide type="bottom" id="EW4-1U-3h1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bR-FL-zgy">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="uur-vV-Pcy">
+                                <rect key="frame" x="0.0" y="38" width="600" height="600"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="SxO-Ro-oyZ">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="7b4-GF-emN" customClass="CollectionViewCell" customModule="Dapper" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uur-vV-Pcy" firstAttribute="leading" secondItem="8bR-FL-zgy" secondAttribute="leading" id="ADs-rG-0xf"/>
+                            <constraint firstAttribute="trailing" secondItem="uur-vV-Pcy" secondAttribute="trailing" id="ZSZ-gW-Ifk"/>
+                            <constraint firstAttribute="bottom" secondItem="uur-vV-Pcy" secondAttribute="bottom" id="eg6-pO-U7Y"/>
+                            <constraint firstItem="uur-vV-Pcy" firstAttribute="top" secondItem="8bR-FL-zgy" secondAttribute="top" id="iiO-Z2-IAX"/>
+                            <constraint firstAttribute="centerX" secondItem="uur-vV-Pcy" secondAttribute="centerX" id="nsG-va-4Jg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Catalog" id="CfQ-eF-IRA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q30-Da-hV6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4760" y="-188"/>
+        </scene>
     </scenes>
     <resources>
         <image name="300px-Gap_logo.png" width="300" height="300"/>
@@ -605,4 +884,7 @@
         <image name="init2.png" width="1080" height="1920"/>
         <image name="t_shirt-32.png" width="32" height="32"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="HX7-31-gTY"/>
+    </inferredMetricsTieBreakers>
 </document>
