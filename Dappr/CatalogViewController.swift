@@ -15,6 +15,7 @@ class CatalogViewController: UIViewController, UICollectionViewDelegateFlowLayou
     
     override func viewDidLoad() {
         super.viewDidLoad()
+  
         // Do any additional setup after loading the view, typically from a nib.
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 70, left: 5, bottom: 10, right: 5)
@@ -23,11 +24,8 @@ class CatalogViewController: UIViewController, UICollectionViewDelegateFlowLayou
         collectionView!.dataSource = self
         collectionView!.delegate = self
         collectionView!.registerClass(CollectionViewCell.self, forCellWithReuseIdentifier: "CollectionViewCell")
-        collectionView!.backgroundColor = UIColor.whiteColor()
+        
         fetchJSON("mens_collection")
-        if json != nil{
-            printJSON()
-        }
         self.view.addSubview(collectionView!)
     }
     
@@ -37,14 +35,20 @@ class CatalogViewController: UIViewController, UICollectionViewDelegateFlowLayou
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // number of elems
-        return 3
+        let x = self.json!["mens"]["bananaRepublic"]["polos"]
+        println(x.array!.count)
+        return x.array!.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CollectionViewCell", forIndexPath: indexPath) as CollectionViewCell
         cell.backgroundColor = UIColor.blackColor()
-        cell.textLabel?.text = "\(indexPath.section):\(indexPath.row)"
-        cell.imageView?.image = UIImage(named: "circle")
+        let url = NSURL(string: self.json!["mens"]["bananaRepublic"]["polos"][indexPath.row]["img"]["src"].string!)
+        let data = NSData(contentsOfURL: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check
+        if data != nil{
+            var bgImage = UIImage(data: data!)
+            cell.imageView?.image = bgImage
+        }
         return cell
     }
     
@@ -56,11 +60,11 @@ class CatalogViewController: UIViewController, UICollectionViewDelegateFlowLayou
         }
     }
     
-    func printJSON() {
+    /*func printJSON() {
         if let items = self.json!["mens"]["OldNavy"]["khakis"].array{
             for item in items{
                 //println(item["price"].string)
             }
         }
-    }
+    }*/
 }
