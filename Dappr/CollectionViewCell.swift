@@ -31,4 +31,3 @@ class CollectionViewCell: UICollectionViewCell {
         contentView.addSubview(textLabel)
     }
 }
-
